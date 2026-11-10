@@ -33,6 +33,14 @@ addEventListener("message", eventListener);
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"a10d8ac38de835021c8d2f920dbf50a920ccc030","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js?v=20261109_02"},{}]};
+_flutter.buildConfig = {"engineRevision":"a10d8ac38de835021c8d2f920dbf50a920ccc030","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js?v=20261110_01"},{}]};
 
-_flutter.loader.load({});
+
+const loopback = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+const renderer = new URLSearchParams(location.search).get('render');
+const useCpu = renderer === 'cpu' || (loopback && renderer !== 'gpu');
+
+// CanvasKit can bypass WebGL when the browser's shader compiler fails.
+_flutter.loader.load({
+  config: useCpu ? { renderer: 'canvaskit', canvasKitForceCpuOnly: true } : {},
+});
