@@ -1,11 +1,11 @@
 {
-    "name": "monitor_site_weellu",
-    "short_name": "monitor_site_weellu",
+    "name": "Weellu - Painel de Controle",
+    "short_name": "Weellu",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0d1117",
+    "theme_color": "#009b6e",
+    "description": "Painel de Controle e Gestão Weellu",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
