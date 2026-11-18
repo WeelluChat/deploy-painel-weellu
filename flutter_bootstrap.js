@@ -49,6 +49,6 @@ const useCpu = renderer === 'cpu' || (loopback && renderer !== 'gpu');
 _flutter.loader.load({
   config: useCpu ? { renderer: 'canvaskit', canvasKitForceCpuOnly: true } : {},
   serviceWorkerSettings: {
-    serviceWorkerVersion: "2819733831" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+    serviceWorkerVersion: "2133691570" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
   },
 });
