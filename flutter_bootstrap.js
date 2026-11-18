@@ -48,7 +48,5 @@ const useCpu = renderer === 'cpu' || (loopback && renderer !== 'gpu');
 // CanvasKit can bypass WebGL when the browser's shader compiler fails.
 _flutter.loader.load({
   config: useCpu ? { renderer: 'canvaskit', canvasKitForceCpuOnly: true } : {},
-  serviceWorkerSettings: {
-    serviceWorkerVersion: "2133691570" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
-  },
+  serviceWorkerSettings: null,
 });
